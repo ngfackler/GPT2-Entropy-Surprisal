@@ -61,8 +61,8 @@ def run_program(input_path, model_name, strip_punct):
 
     rows = []
 
-    for i in range(len(texts['Text'])):
-        text = texts['Text'][i]
+    for i in range(len(texts['text'])):
+        text = texts['text'][i]
         words = text.split()
 
         for j in range(1, len(words)):
@@ -81,15 +81,15 @@ def run_program(input_path, model_name, strip_punct):
                 ' ' + actual_word_no_punc,
                 model,
                 tokenizer,
-                texts['coding'][i]
+                texts['code'][i]
             )
 
             predicted = '' if result['predicted_word'] == '\n' else result['predicted_word']
 
             row_data = {
-                'Word_ID': f'T{i+1}W{j}',
+                'Word_ID': f'T{i+1}W{j + 1}',
                 'Text_ID': i+1,
-                'word_location': j,
+                'word_location': j + 1,
                 'target': ' ' + actual_word_no_punc,
                 'predicted_word': predicted,
                 'entropy': result['entropy'],
