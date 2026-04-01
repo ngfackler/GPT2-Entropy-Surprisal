@@ -2,7 +2,7 @@
 
 Uses logits from GPT-2 to compute word-by-word entropy, surprisal, and cosine similarity from text via a Gradio interface.
 
-Authors: Nikki Fackler & Zachary Gordon (zgordo on Github)
+Authors: Nikki Fackler Kaye & Zachary Gordon (zgordo on Github)
 
 ## Files
 
